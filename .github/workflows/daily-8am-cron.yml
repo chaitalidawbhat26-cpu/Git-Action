@@ -1,0 +1,18 @@
+name: Cron Job - Daily at 8:00 AM
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Triggers daily at 8:00 AM UTC
+
+jobs:
+  daily-cron-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print start message
+        run: echo "Daily morning job has started."
+
+      - name: Display current date and time
+        run: date
+
+      - name: Print completion message
+        run: echo "Daily morning job completed successfully."
